@@ -38,7 +38,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 8px;
+    width: 4px;
   }
   
   body::-webkit-scrollbar-track {
@@ -312,4 +312,9 @@ body::-webkit-scrollbar {
     border-top: 1px solid var(--jet);
     border-left: 1px solid var(--jet);
     margin-top: 15px;
+}
+
+.skills_description {
+    padding: 7px;
+    text-align: center;
 }
