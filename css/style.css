@@ -35,6 +35,9 @@ body {
     background-color: var(--smoky-black);
     font-family: 'Poppins', sans-serif;
     font-size: 62.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body::-webkit-scrollbar {
