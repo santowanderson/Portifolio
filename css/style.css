@@ -61,7 +61,7 @@ body::-webkit-scrollbar {
 
 #main_container {
     min-width: 375px;
-    margin: var(--margin-15) !important;
+    padding: 15px;
     margin-bottom: 70px;
 }
 
