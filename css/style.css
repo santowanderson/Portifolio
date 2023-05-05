@@ -35,6 +35,7 @@ body {
     background-color: var(--smoky-black);
     font-family: 'Poppins', sans-serif;
     font-size: 62.5%;
+    padding: 15px;
 }
 
 body::-webkit-scrollbar {
@@ -61,7 +62,6 @@ body::-webkit-scrollbar {
 
 #main_container {
     min-width: 375px;
-    margin: 15px;
 }
 
 /*----------------------------
