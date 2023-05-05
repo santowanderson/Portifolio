@@ -35,9 +35,6 @@ body {
     background-color: var(--smoky-black);
     font-family: 'Poppins', sans-serif;
     font-size: 62.5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 body::-webkit-scrollbar {
@@ -64,8 +61,7 @@ body::-webkit-scrollbar {
 
 #main_container {
     min-width: 375px;
-    padding: 15px;
-    margin-bottom: 70px;
+    margin: 15px;
 }
 
 /*----------------------------
@@ -128,9 +124,19 @@ body::-webkit-scrollbar {
 }
 
 .title h1 {
-    font-size: 1.5rem;
     color: var(--white-2);
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.title::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    border-radius: 7px;
+    background-color: var(--vegas-gold);
+    position: absolute;
+    margin-top: 5px;
 }
 
 /*----------------------------
@@ -148,6 +154,7 @@ body::-webkit-scrollbar {
     align-items: center;
     background-color: var(--eerie-black-2);
     transition: var(--transition-1);
+    margin-bottom: var(--margin-15);
 }
 
 #profile {
@@ -290,34 +297,13 @@ body::-webkit-scrollbar {
     About me section
 -----------------------------*/
 
-#about_me_section {
+.content_container {
     border-radius: var(--border-radius);
-    margin-top: var(--margin-15);
     border: 1px solid var(--jet);
-    margin-bottom: 80px;
-    background-color: var(--eerie-black-2);
     padding: 15px;
+    background-color: var(--eerie-black-2);
 }
 
-#about_me_section p {
-    font-size: 0.8rem;
-    color: var(--light-gray-70);
-    padding: 10px 0 10px 0;
-}
-
-.items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--onyx);
-    border-radius: var(--border-radius);
-    border-top: 1px solid var(--jet);
-    border-left: 1px solid var(--jet);
-    margin-top: 15px;
-}
-
-.skills_description {
-    padding: 7px;
-    text-align: center;
+.about_me_content {
+    margin-top: 20px;
 }
