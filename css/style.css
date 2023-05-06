@@ -142,7 +142,6 @@ body::-webkit-scrollbar {
     border-radius: 7px;
     background-color: var(--vegas-gold);
     position: absolute;
-    margin-top: 5px;
 }
 
 /*----------------------------
@@ -320,6 +319,13 @@ body::-webkit-scrollbar {
     margin-bottom: var(--margin-15);
 }
 
+.skills_title h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white-2);
+    margin-bottom: var(--margin-15);
+}
+
 .skills_items {
     display: flex;
     flex-direction: column;
@@ -333,4 +339,70 @@ body::-webkit-scrollbar {
     border-left: 1px solid var(--border-color);
     border-top: 1px solid var(--border-color);
     box-shadow: var(--shadow-1);
+}
+
+/*----------------------------
+    Resume me section
+-----------------------------*/
+
+.resume_timeline {
+    margin-top: 30px;
+}
+
+.resume_titles {
+    display: flex;
+    align-items: center;
+}
+
+.resume_titles h1 {
+    color: var(--white-1);
+    font-size: 1rem;
+    font: 500;
+}
+
+.roadmap_items {
+    position: relative;
+    padding-left: 45px;
+    margin-top: 25px;
+}
+
+.mark {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--onyx);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mark::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--vegas-gold);
+}
+
+.roadmap_items h2 {
+    color: var(--light-gray);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.roadmap_items p:first-of-type {
+    color: var(--vegas-gold);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 0.7rem;
+}
+
+.roadmap_items p:last-of-type {
+    color: var(--light-gray);
+    font-size: 0.8rem;
+    font-weight: 400;
 }
