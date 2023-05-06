@@ -306,4 +306,23 @@ body::-webkit-scrollbar {
 
 .about_me_content {
     margin-top: 20px;
+    color: var(--light-gray);
+    font-size: 0.9rem;
 }
+
+.about_me_content p {
+    margin-bottom: var(--margin-15);
+}
+
+.skills_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+    background-color: var(--onyx);
+    margin-bottom: var(--margin-15);
+    padding: 15px;
+    color: var(--light-gray);
+}
+
