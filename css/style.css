@@ -68,6 +68,7 @@ body::-webkit-scrollbar {
 
 #main_container {
     min-width: 375px;
+    margin-bottom: 60px;
 }
 
 /*----------------------------
@@ -273,6 +274,7 @@ body::-webkit-scrollbar {
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
     padding: 20px;
+    z-index: 1;
 }
 
 #navbar ul {
@@ -360,31 +362,52 @@ body::-webkit-scrollbar {
     font: 500;
 }
 
-.roadmap_items {
+.timeline_list {
     padding-left: 45px;
     margin-top: 25px;
-    border: 1px solid red;
 }
 
-.roadmap_items li {
-    margin-bottom: 20px;
-}
-
-.roadmap_items h2 {
+.timeline_list h2 {
     color: var(--light-gray);
     font-weight: 600;
     font-size: 0.9rem;
 }
 
-.roadmap_items p:first-of-type {
+.timeline_list p:first-of-type {
     color: var(--vegas-gold);
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 0.7rem;
 }
 
-.roadmap_items p:last-of-type {
+.timeline_list p:last-of-type {
     color: var(--light-gray);
     font-size: 0.8rem;
     font-weight: 400;
+}
+
+.timeline_items {position: relative;}
+
+.timeline_items:not(:last-child) {margin-bottom: 20px;}
+
+.timeline_items:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: -30px;
+    width: 1px;
+    height: calc(100% + 50px);
+    background-color: var(--border-color);
+}
+
+.timeline_items::after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: -33px;
+    height: 6px;
+    width: 6px;
+    background-color: var(--vegas-gold);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--border-color);
 }
