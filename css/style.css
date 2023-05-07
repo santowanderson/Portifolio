@@ -411,3 +411,14 @@ body::-webkit-scrollbar {
     border-radius: 50%;
     box-shadow: 0 0 0 4px var(--border-color);
 }
+
+/*----------------------------
+    Portfolio me section
+-----------------------------*/
+
+.portfolio_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+}
