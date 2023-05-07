@@ -42,9 +42,6 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 62.5%;
     padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 body::-webkit-scrollbar {
@@ -71,7 +68,7 @@ body::-webkit-scrollbar {
 
 #main_container {
     min-width: 375px;
-    margin-bottom: 60px;
+    margin-bottom: 0 auto 60px auto;
 }
 
 /*----------------------------
@@ -424,4 +421,64 @@ body::-webkit-scrollbar {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-gap: 10px;
+}
+
+.portfolio_items {
+    margin-top: 25px;
+    border-radius: var(--border-radius);
+}
+
+/*----------------------------
+    Contact me section
+-----------------------------*/
+
+form {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form > div h1 {
+    color: var(--light-gray);
+    font-size: 1.1rem;
+}
+
+input {
+    border-radius: 15px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    outline: none;
+    background-color: var(--black-color-2);
+    color: var(--light-gray);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+textarea {
+    background-color: var(--black-color-2);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    outline: none;
+    color: var(--light-gray);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 20px;
+    resize: vertical;
+}
+
+.send_message_btn {
+    border: none;
+    outline: none;
+    color: var(--vegas-gold);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-image: var(--gradient-1);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.send_message_btn i {
+    padding: 8px;
 }
