@@ -68,7 +68,7 @@ body::-webkit-scrollbar {
 
 #main_container {
     min-width: 375px;
-    margin-bottom: 0 auto 60px auto;
+    margin: 0 auto 60px auto;
 }
 
 /*----------------------------
