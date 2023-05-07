@@ -296,8 +296,8 @@ body::-webkit-scrollbar {
     color: var(--light-gray-70);
 }
 
-#navbar ul li a.active {
-    color: var(--vegas-gold);
+.selected {
+    color: var(--vegas-gold) !important;
 }
 
 /*----------------------------
@@ -432,19 +432,19 @@ body::-webkit-scrollbar {
     Contact me section
 -----------------------------*/
 
-form {
+.form {
     margin-top: 25px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-form > div h1 {
+.form > div h1 {
     color: var(--light-gray);
     font-size: 1.1rem;
 }
 
-input {
+.input_form {
     border-radius: 15px;
     padding: 15px;
     border: 1px solid var(--border-color);
@@ -454,6 +454,10 @@ input {
     font-weight: 700;
     font-size: 0.9rem;
 }
+
+.input_form:focus, textarea:focus {border: 1px solid var(--vegas-gold);}
+
+.input_form:focus:invalid, textarea:focus:invalid { border: 1px solid var(--bittersweet-shimmer);}
 
 textarea {
     background-color: var(--black-color-2);
@@ -467,18 +471,28 @@ textarea {
     resize: vertical;
 }
 
+textarea::-webkit-resizer { display: none; }
+
+
+
 .send_message_btn {
     border: none;
     outline: none;
     color: var(--vegas-gold);
     padding: 10px;
     border-radius: 10px;
-    cursor: pointer;
     background-image: var(--gradient-1);
     font-size: 0.9rem;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .send_message_btn i {
     padding: 8px;
 }
+
+.send_message_btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+

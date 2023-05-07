@@ -87,19 +87,19 @@
                     <li><a href="index.html" class="nav_link">About</a></li>
                     <li><a href="resume.html" class="nav_link">Resume</a></li>
                     <li><a href="portfolio.html" class="nav_link">Portfolio</a></li>
-                    <li><a href="contact.html" class="nav_link">Contact</a></li>
+                    <li><a href="contact.html" class="nav_link selected">Contact</a></li>
                 </ul>
             </nav>
-            <section class="content_container">
+            <section class="content_container" data-page="contact">
                 <header class="title">
                     <h1>Contact</h1>
                 </header>
-               <form>
+               <form action="#" class="form">
                 <div><h1>Contact Form</h1></div>
-                <input type="text" placeholder="Full name">
-                <input type="email" placeholder="Email address">
-                <textarea cols="30" rows="10"></textarea>
-                <button class="send_message_btn"><i class="ph-fill ph-paper-plane-tilt"></i>Send Message</button>
+                <input type="text" name="fullname" placeholder="Full name" class="input_form" required data-form-input>
+                <input type="email" placeholder="Email address" class="input_form" required data-form-input>
+                <textarea name="message" cols="30" rows="10" required data-form-input></textarea>
+                <button class="send_message_btn" type="submit" disabled><i class="ph-fill ph-paper-plane-tilt"></i>Send Message</button>
                </form>
             </section>
         </article>
