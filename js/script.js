@@ -10,7 +10,8 @@ toggleButton.addEventListener('click', () => {
 });
 
 
-//navbar links variables
+//carousel variables
+
 
 
 
