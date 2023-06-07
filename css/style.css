@@ -385,6 +385,7 @@ body::-webkit-scrollbar { width: 4px; }
     color: var(--white-1);
     font-size: var(--subtitle-size);
     font: 500;
+    margin-left: 10px;
 }
 
 .timeline_list {
