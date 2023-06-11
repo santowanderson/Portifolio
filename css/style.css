@@ -75,17 +75,17 @@ body {
     padding: 15px;
 }
 
-body::-webkit-scrollbar { width: 4px; }
+body::-webkit-scrollbar { width: 7px; }
   
-  body::-webkit-scrollbar-track { background-color: var(--bg-body); }
+body::-webkit-scrollbar-track { background-color: var(--bg-body); }
   
-  body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
     background-color: var(--onyx);
     border-radius: 20px;
 }
 
 ::selection {
-    background-color: var(--vegas-gold);
+    background-color: var(--orange-yellow-crayola);
     color: var(--black-color-1);
 }
 
@@ -93,10 +93,11 @@ body::-webkit-scrollbar { width: 4px; }
         Main
 -----------------------------*/
 
-#main_container {
-    min-width: 375px;
-    margin: 0 auto 60px auto;
-}
+main {
+    margin: 15px 12px;
+    margin-bottom: 75px;
+    min-width: 259px;
+  }
 
 /*----------------------------
     Reused style
@@ -140,6 +141,7 @@ body::-webkit-scrollbar { width: 4px; }
     border-radius: 7px;
     background-color: var(--orange-yellow-crayola);
     position: absolute;
+    margin-top: 7px;
 }
 
 /*----------------------------
@@ -155,16 +157,14 @@ body::-webkit-scrollbar { width: 4px; }
     display: flex;
     flex-direction: column;
     background-color: var(--black-color-2);
-    margin-bottom: var(--margin-15);
+    margin-bottom: 15px;
     transition: var(--transition-1);
 }
 
 #profile { padding: 15px; }
 
 .profile_img {
-    width: 80px;
-    height: 80px;
-    background:  var(--border-color) url(../assets/my-avatar.png) center;
+    background:  var(--gradient-jet);
     background-size: cover;
     border-radius: var(--border-radius);
 }
@@ -175,9 +175,9 @@ body::-webkit-scrollbar { width: 4px; }
     align-items: center;
 }
 
-.profile_title { margin-left: 15px; }
+.profile_header div:first-of-type { margin-left: 15px; }
 
-.profile_title h1 {
+.profile_header h1 {
     color: var(--white-1);
     font-weight: 600;
     font-size: var(--subtitle-size);
@@ -193,13 +193,13 @@ body::-webkit-scrollbar { width: 4px; }
     margin: 10px;
 }
 
-#profile_info {
+.profile_info {
     opacity: 0;
     visibility: hidden;
     transition: var(--transition-1);
 }
 
-.profile_info_more {
+.profile_info ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -226,6 +226,7 @@ body::-webkit-scrollbar { width: 4px; }
 
 .social_icons ul {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 15px;
 }
@@ -233,7 +234,6 @@ body::-webkit-scrollbar { width: 4px; }
 .social_icons a {
     color: var(--orange-yellow-crayola);
     font-size: 1.2rem;
-    margin-top: 10px;
 }
 
 .border_separator {
@@ -246,7 +246,7 @@ body::-webkit-scrollbar { width: 4px; }
     max-height: 397px;
 }
 
-#sidebar.active #profile_info {
+#sidebar.active .profile_info {
     opacity: 1;
     visibility: visible;
 }
@@ -341,7 +341,7 @@ body::-webkit-scrollbar { width: 4px; }
 }
 
 .about_me_content p:not(:last-of-type) {
-    margin-bottom: var(--margin-15);
+    margin-bottom: 15px;
 }
 
 /*----------------------------
@@ -462,11 +462,11 @@ body::-webkit-scrollbar { width: 4px; }
 @media (min-width: 580px) {
     body {
         transition: var(--transition-1);
-        padding: 60px;
     }
 
-    #main_container {
+    main {
         max-width: 580px;
+        margin-top: 55px;
     }
 
 
@@ -474,16 +474,16 @@ body::-webkit-scrollbar { width: 4px; }
 
     #sidebar {
         max-height: 180px;
+        margin-bottom: 30px;
     }
 
-    #sidebar.active { max-height: 548px; }
+    .border_separator { margin: 30px 0 30px 0; }
 
-    .profile_header {
-        padding: 15px;
-    }
+    .profile_img { border-radius: 30px; }
 
+    #profile { padding: 30px; }
 
-
+    #sidebar.active { max-height: 585px; }
 
     /*---------- Responsive style button ------------*/
 
@@ -492,9 +492,10 @@ body::-webkit-scrollbar { width: 4px; }
     #btn span { 
         display: block; 
         color: var(--vegas-gold);
+        font-size: 0.8rem;
     }
 
     #btn ion-icon { display: none; }
 
-
+    .profile_img img { width: 120px; }
 }
