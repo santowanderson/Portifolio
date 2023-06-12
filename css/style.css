@@ -72,10 +72,6 @@ body {
     background-color: var(--bg-body);
     font-family: 'Poppins', sans-serif;
     font-size: 62.5%;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 body::-webkit-scrollbar { width: 7px; }
@@ -97,7 +93,7 @@ body::-webkit-scrollbar-thumb {
 -----------------------------*/
 
 main {
-    margin-bottom: 75px;
+    margin: 15px 12px;
     min-width: 259px;
   }
 
@@ -461,23 +457,19 @@ main {
     Responsive style min-width 580px
 ------------------------------------------*/
 
-@media (min-width: 580px) {
-    body {
-        transition: var(--transition-1);
+@media screen and (min-width: 580px) {
+    
+    article, #sidebar {
+        width: 520px;
+        margin-inline: auto;
+        border-radius: 20px;
     }
-
-    main {
-        max-width: 580px;
-        margin: 45px 15px 80px 15px;
-    }
-
 
     /*---------- Responsive style sidebar ------------*/
 
     #sidebar {
-        max-height: 180px;
         margin-bottom: 30px;
-        border-radius: 20px;
+        max-height: 180px;
     }
 
     .border_separator { margin: 30px 0 30px 0; }
@@ -530,49 +522,85 @@ main {
 
     /*About me section*/
 
-.content_container { padding: 25px; }
+    .content_container { padding: 25px; }
 
-.title h1 {
-    font-size: 1.8rem;
-}
+    .title h1 {
+        font-size: 1.8rem;
+    }
 
-.title::after {
-    padding: 1px;
-    width: 40px;
-}
+    .title::after {
+        padding: 1px;
+        width: 40px;
+    }
 
-.about_me_content p {
-    font-size: 1rem;
-}
+    .about_me_content p {
+        font-size: 1rem;
+    }
 
-.about_me_content p:not(:last-of-type) {
-    margin-top: 35px;
-}
+    .about_me_content p:not(:last-of-type) {
+        margin-top: 35px;
+    }
 
-.skills_container h1 {
-    font-size: 1.6rem;
-    margin: 20px 0 15px 0;
-}
+    .skills_container h1 {
+        font-size: 1.6rem;
+        margin: 20px 0 15px 0;
+    }
 
 
 /*----------------------------
     Resume responsive style
 -----------------------------*/
 
-.resume_titles h1 { font-size: 1.6rem; }
+    .resume_titles h1 { font-size: 1.6rem; }
 
-.timeline_items:not(:last-child)::before { left: -22px; }
+    .timeline_items:not(:last-child)::before { left: -22px; }
 
-.timeline_items::after { left: -25px; }
+    .timeline_items::after { left: -25px; }
 
-.timeline_items h2 { font-size: 1rem; }
+    .timeline_items h2 { font-size: 1rem; }
 
-.timeline_items span { 
-    display: inline-block;
-    font-size: 0.8rem;
-    margin: 5px 0 5px 0;
+    .timeline_items span { 
+        display: inline-block;
+        font-size: 0.8rem;
+        margin: 5px 0 5px 0;
+    }
+
+    .timeline_items p { font-size: 0.9rem; }
+
+    }
+
+
+/*-----------------------------------------
+    Responsive style min-width 768px
+------------------------------------------*/
+
+@media screen and (min-width: 768px) {
+
+    main {
+        margin-bottom: 100px;
+    }
+
+    article, #sidebar {
+        width: 700px;
+    }
+    /* Sidebar */
+
+
+    .profile_info > ul {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+
 }
 
-.timeline_items p { font-size: 0.9rem; }
+/*-----------------------------------------
+    Responsive style min-width 1024px
+------------------------------------------*/
 
+@media screen and (min-width: 1024px) {
+
+
+    article, #sidebar {
+        width: 950px;
+    }
 }
