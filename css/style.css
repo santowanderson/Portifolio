@@ -93,7 +93,7 @@ body::-webkit-scrollbar-thumb {
 -----------------------------*/
 
 main {
-    margin: 15px 12px;
+    margin: 15px 12px 90px 12px;
     min-width: 259px;
   }
 
@@ -292,10 +292,11 @@ main {
     bottom: 0;
     left: 0;
     background-color: rgba(43, 43, 44, 1);
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
+    backdrop-filter: blur(10px);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     padding: 20px;
-    z-index: 1;
+    z-index: 5;
 }
 
 #navbar ul {
@@ -465,6 +466,11 @@ main {
         border-radius: 20px;
     }
 
+    main {
+        margin-top: 60px;
+        margin-bottom: 100px;
+    }
+
     /*---------- Responsive style sidebar ------------*/
 
     #sidebar {
@@ -602,5 +608,31 @@ main {
 
     article, #sidebar {
         width: 950px;
+    }
+
+    article {
+        position: relative;
+    }
+
+    #navbar {
+        position: absolute;
+        bottom: auto;
+        left: auto;
+        top: 0;
+        right: 0;
+        width: max-content;
+        border-radius: 0 20px;
+        box-shadow: var(--shadow-2);
+    }
+}
+
+/*-----------------------------------------
+    Responsive style min-width 1024px
+------------------------------------------*/
+
+@media screen and (min-width: 1250px) {
+    main {
+        display: flex;
+        flex-direction: row;
     }
 }
