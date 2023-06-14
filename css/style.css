@@ -6,6 +6,12 @@
     text-decoration: none;
 }
 
+button, textarea, input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
 :root {
 
     /*Colors variables*/
@@ -62,6 +68,7 @@
     /*Box-shadow*/
     --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
     --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+    --shadow-3: rgba(0, 0, 0, 0.1) 0px 4px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 6px 0px, rgba(0, 0, 0, 0.1) 0px 8px 8px 0px, rgba(0, 0, 0, 0.1) 0px 16px 16px 0px, rgba(0, 0, 0, 0.15) 8px 32px 32px 0px, rgba(0, 0, 0, 0.15) 8px 64px 64px 0px;
 }
 
 /*----------------------------
@@ -107,7 +114,7 @@ main {
     height: 30px;
     border-radius: 8px;
     background: var(--border-gradient-onyx);
-    box-shadow:  var(--shadow-1);
+    box-shadow:  var(--shadow-3);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -453,6 +460,31 @@ main {
     border-radius: var(--border-radius);
 }
 
+/*----------------------------
+    Contact section
+-----------------------------*/
+
+.form_title {
+    padding: 20px;
+}
+
+.form_wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    font-size: 1rem;
+    color: var(--light-gray);
+}
+
+
+
 
 /*-----------------------------------------
     Responsive style min-width 580px
@@ -576,6 +608,7 @@ main {
     }
 
 
+
 /*-----------------------------------------
     Responsive style min-width 768px
 ------------------------------------------*/
@@ -631,8 +664,38 @@ main {
 ------------------------------------------*/
 
 @media screen and (min-width: 1250px) {
+
+    #sidebar, article {
+        width: auto;
+    }
+
     main {
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    #btn {
+        display: none;
+    }
+
+    #sidebar {
+        max-height: max-content;
+        height: 100%;
+        position: sticky;
+    }
+
+    .profile_info > ul {
+        grid-template-columns: 1fr;
+    }
+
+    .profile_header {
+        flex-direction: column;
+    }
+
+    #sidebar .profile_info {
+        opacity: 1;
+        visibility: visible;
     }
 }

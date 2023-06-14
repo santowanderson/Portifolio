@@ -12,12 +12,12 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <title>Portfolio</title>
 </head>
 
 <body>
-    <main>
+    <main id="main_container">
         <aside id="sidebar">
             <button id="btn">
                 <ion-icon name="chevron-down-outline"></ion-icon>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="profile_info">
                     <div class="border_separator"></div>
-                    <ul>
+                    <ul class="profile_info_more">
                         <li class="items_list">
                             <div class="icon_box"><ion-icon name="mail-outline"></ion-icon></i></div>
                             <div class="contact_info">
@@ -85,44 +85,25 @@
         <article>
             <nav id="navbar">
                 <ul>
-                    <li><a href="index.html" class="nav_link selected">About</a></li>
+                    <li><a href="index.html" class="nav_link">About</a></li>
                     <li><a href="resume.html" class="nav_link">Resume</a></li>
                     <li><a href="portfolio.html" class="nav_link">Portfolio</a></li>
-                    <li><a href="contact.html" class="nav_link">Contact</a></li>
+                    <li><a href="contact.html" class="nav_link selected">Contact</a></li>
                 </ul>
             </nav>
             <section class="content_container">
                 <header class="title">
-                    <h1>About Me</h1>
+                    <h1>Contact</h1>
                 </header>
-                <div class="about_me_content">
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting 
-                        industry. Lorem Ipsum has been the industry's standard dummy text
-                         ever since the 1500s, when an unknown printer took a galley of 
-                         type and scrambled it to make a type specimen book.
-                    </p>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting 
-                        industry. Lorem Ipsum has been the industry's standard dummy text
-                         ever since the 1500s, when an unknown printer took a galley of 
-                         type and scrambled it to make a type specimen book.
-                    </p>
-                </div>
-                <section class="skills_container">
-                    <header>
-                        <h1>My skills</h1>
-                    </header>
-                    <div class="my_skills">
-                        <ul>
-                            <li class="skills_items">
-                            </li>
-                            <li class="skills_items"></li>
-                            <li class="skills_items"></li>
-                            <li class="skills_items"></li>
-                        </ul>
+                <form action="">
+                    <h3 class="form_title">Contact form</h3>
+                    <div class="form_wrapper">
+                        <input type="text" required placeholder="Full name">
+                        <input type="email" required placeholder="Email address">
+                        <textarea required placeholder="Your message"></textarea>
+                        <button type="submit" class="send_button"><ion-icon name="paper-plane"></ion-icon></ion-icon>Send message</button>
                     </div>
-                </section>
+                </form>
             </section>
         </article>
     </main>
@@ -132,4 +113,5 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

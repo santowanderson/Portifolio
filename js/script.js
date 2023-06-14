@@ -6,14 +6,8 @@ const sidebar = document.querySelector('#sidebar');
 
 //Profile dropdown toggle buttom
 toggleButton.addEventListener('click', () => {
-    sidebar.classList.toggle('active');
+	sidebar.classList.toggle('active');
 });
-
-
-//carousel variables
-
-
-
 
 
 //form variables
@@ -23,14 +17,14 @@ const form = document.querySelector('.form');
 
 //add event to all forms input
 for (let i = 0; i < inputs.length; i++) {
-    inputs[i].addEventListener("input", function () {
+	inputs[i].addEventListener('input', function () {
   
-      // check form validation
-      if (form.checkValidity()) {
-        formBtn.removeAttribute("disabled");
-      } else {
-        formBtn.setAttribute("disabled", "");
-      }
+		// check form validation
+		if (form.checkValidity()) {
+			formBtn.removeAttribute('disabled');
+		} else {
+			formBtn.setAttribute('disabled', '');
+		}
   
-    });
-  }
+	});
+}
