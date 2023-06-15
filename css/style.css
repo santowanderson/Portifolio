@@ -122,32 +122,29 @@ main {
     font-size: 16px;
 }
 
-.icon_box::before {
-    content: '';
-    position: absolute;
-    inset: 1px;
-    background-color: var(--black-color-1);
-    border-radius: inherit;
-    z-index: -1;
-}
-
 .icon_box ion-icon { --ionicon-stroke-width: 35px; }
 
+.title { 
+    margin-bottom: 35px; 
+    padding-bottom: 8px;
+}
+
 .title h1 {
+    position: relative;
     color: var(--white-2);
     font-size: var(--title-size);
     font-weight: 700;
+    padding-bottom: 7px;
 }
 
-.title::after {
+.title h1::before {
     content: '';
+    bottom: 0;
     width: 30px;
-    height: 3px;
-    border-radius: 7px;
+    height: 4px;
+    border-radius: 10px;
     background-color: var(--orange-yellow-crayola);
     position: absolute;
-    margin-top: 7px;
-
 }
 
 /*----------------------------
