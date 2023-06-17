@@ -494,6 +494,7 @@ main {
     justify-content: center;
     opacity: 0;
     transition: var(--transition-1);
+    transform: scale(0.8);
     z-index: 1;
 }
 
