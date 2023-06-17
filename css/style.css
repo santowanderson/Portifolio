@@ -1,46 +1,22 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-    text-decoration: none;
-}
-
-button, textarea, input {
-    border: none;
-    outline: none;
-    background: transparent;
-}
+/*----------------------------
+        Variables
+-----------------------------*/
 
 :root {
 
     /*Colors variables*/
-    --border-color: hsl(0, 0%, 22%);
+    --jet: hsl(0, 0%, 22%);
     --onyx: hsl(240, 1%, 17%);
-    --black-color-1: hsl(240, 3%, 13%);
-    --black-color-2: hsl(240, 2%, 12%);
-    --bg-body: hsl(0, 0%, 7%);
+    --eerie-black-1: hsl(240, 2%, 13%);
+    --eerie-black-2: hsl(240, 2%, 12%);
+    --smoky-black: hsl(0, 0%, 7%);
     --white-1: hsl(0, 0%, 100%);
     --white-2: hsl(0, 0%, 98%);
     --orange-yellow-crayola: hsl(45, 100%, 72%);
     --vegas-gold: hsl(45, 54%, 58%);
     --light-gray: hsl(0, 0%, 84%);
-    --light-gray-70: hsla(0, 0%, 84%, 0.702);
+    --light-gray-70: hsla(0, 0%, 84%, 0.7);
     --bittersweet-shimmer: hsl(0, 43%, 51%);
-
-    /*Font-size variables*/
-    --subtext-size: 0.7rem;
-    --text-size: 0.8rem;
-    --subtitle-size: 1.1rem;
-    --title-size: 1.4rem;
-
-    /*Font-size variables > 580px*/
-
-    
-
-
-    --border-radius: 15px;
-    --margin-15: 15px;
 
 
 
@@ -69,22 +45,46 @@ button, textarea, input {
     /*Box-shadow*/
     --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
     --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
-    --shadow-3: rgba(0, 0, 0, 0.1) 0px 4px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 6px 0px, rgba(0, 0, 0, 0.1) 0px 8px 8px 0px, rgba(0, 0, 0, 0.1) 0px 16px 16px 0px, rgba(0, 0, 0, 0.15) 8px 32px 32px 0px, rgba(0, 0, 0, 0.15) 8px 64px 64px 0px;
+    --shadow-3: rgba(0, 0, 0, 0.1) 0px 4px 4px 0px, 
+                rgba(0, 0, 0, 0.05) 0px 1px 6px 0px, 
+                rgba(0, 0, 0, 0.1) 0px 8px 8px 0px, 
+                rgba(0, 0, 0, 0.1) 0px 16px 16px 0px, 
+                rgba(0, 0, 0, 0.15) 8px 32px 32px 0px, 
+                rgba(0, 0, 0, 0.15) 8px 64px 64px 0px;
 }
+
+/*----------------------------
+        Reset style
+-----------------------------*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+button, textarea, input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+body, html { font-family: 'Poppins', sans-serif; }
 
 /*----------------------------
         Body style
 -----------------------------*/
 
 body {
-    background-color: var(--bg-body);
-    font-family: 'Poppins', sans-serif;
+    background-color: var(--smoky-black);
     font-size: 62.5%;
 }
 
 body::-webkit-scrollbar { width: 7px; }
   
-body::-webkit-scrollbar-track { background-color: var(--bg-body); }
+body::-webkit-scrollbar-track { background-color: var(--smoky-black); }
   
 body::-webkit-scrollbar-thumb {
     background-color: var(--onyx);
@@ -93,7 +93,7 @@ body::-webkit-scrollbar-thumb {
 
 ::selection {
     background-color: var(--orange-yellow-crayola);
-    color: var(--black-color-1);
+    color: var(--eerie-black-1);
 }
 
 /*----------------------------
@@ -124,15 +124,12 @@ main {
 
 .icon_box ion-icon { --ionicon-stroke-width: 35px; }
 
-.title { 
-    margin-bottom: 35px; 
-    padding-bottom: 8px;
-}
+.title { margin-bottom: 15px; }
 
 .title h1 {
     position: relative;
     color: var(--white-2);
-    font-size: var(--title-size);
+    font-size: 1.5rem;
     font-weight: 700;
     padding-bottom: 7px;
 }
@@ -147,19 +144,26 @@ main {
     position: absolute;
 }
 
+.subtitle h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--light-gray);
+    margin: 15px 0 15px 0;
+}
+
 /*----------------------------
     Profile navegation
 -----------------------------*/
 
 #sidebar {
     max-height: 112px;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
+    border: 1px solid var(--jet);
+    border-radius: 20px;
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-color: var(--black-color-2);
+    background-color: var(--eerie-black-2);
     margin-bottom: 15px;
     transition: var(--transition-1);
 }
@@ -167,9 +171,9 @@ main {
 #profile { padding: 15px; }
 
 .profile_img {
-    background:  var(--gradient-jet);
-    background-size: cover;
-    border-radius: var(--border-radius);
+    background-color:  var(--jet);
+    object-fit: center;
+    border-radius: 20px;
 }
 
 .profile_header {
@@ -183,7 +187,7 @@ main {
 .profile_header h1 {
     color: var(--white-1);
     font-weight: 600;
-    font-size: var(--subtitle-size);
+    font-size: 1rem;
 }
 
 .profile_header h3 {
@@ -193,7 +197,7 @@ main {
     text-align: center;
     padding: 3px;
     border-radius: 7px;
-    margin: 10px;
+    margin-top: 10px;
 }
 
 .profile_info {
@@ -241,7 +245,7 @@ main {
 
 .border_separator {
     height: 1px;
-    background-color: var(--border-color);
+    background-color: var(--jet);
     margin: 15px 0 15px 0;
 }
 
@@ -314,7 +318,7 @@ main {
 
 #navbar ul li a {
     color: var(--light-gray);
-    font-size: var(--text-size);
+    font-size: 0.8rem;
     font-weight: 600;
     user-select: none;
 }
@@ -332,32 +336,22 @@ main {
 -----------------------------*/
 
 .content_container {
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    border: 1px solid var(--jet);
     padding: 15px;
-    background-color: var(--black-color-2);
+    background-color: var(--eerie-black-2);
 }
 
 .about_me_content {
-    margin-top: 20px;
     color: var(--light-gray);
-    font-size: var(--text-size);
+    font-size: 0.8rem;
 }
 
-.about_me_content p:not(:last-of-type) {
-    margin-bottom: 15px;
-}
+.about_me_content p:not(:last-of-type) { margin-bottom: 15px; }
 
 /*----------------------------
     Skills section
 -----------------------------*/
-
-.skills_container h1 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--light-gray);
-    margin: 15px 0 15px 0;
-}
 
 .my_skills ul {
     display: flex;
@@ -369,16 +363,14 @@ main {
     height: 200px;
     background: var(--gradient-jet);
     box-shadow: var(--shadow-2);
-    border-radius: var(--border-radius);
+    border-radius: 16px;
 }
 
 /*----------------------------
     Resume me section
 -----------------------------*/
 
-.resume_timeline {
-    margin-top: 30px;
-}
+.resume_timeline { margin-top: 25px; }
 
 .resume_titles {
     display: flex;
@@ -387,9 +379,9 @@ main {
 
 .resume_titles h1 {
     color: var(--white-1);
-    font-size: var(--subtitle-size);
+    font-size: 1.2rem;
     font: 500;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .timeline_list {
@@ -400,19 +392,19 @@ main {
 .timeline_list h2 {
     color: var(--light-gray);
     font-weight: 600;
-    font-size: var(--text-size);
+    font-size: 0.9rem;
 }
 
 .timeline_list span {
+    display: inline-block;
     color: var(--vegas-gold);
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: var(--subtext-size);
+    margin: 5px 0 5px 0;
+    font-size: 0.8rem;
 }
 
 .timeline_list p {
     color: var(--light-gray);
-    font-size: var(--text-size);
+    font-size: 0.8rem;
     font-weight: 400;
 }
 
@@ -427,7 +419,7 @@ main {
     left: -30px;
     width: 1px;
     height: calc(100% + 50px);
-    background-color: var(--border-color);
+    background-color: var(--jet);
 }
 
 .timeline_items::after {
@@ -439,7 +431,7 @@ main {
     width: 6px;
     background-color: var(--vegas-gold);
     border-radius: 50%;
-    box-shadow: 0 0 0 4px var(--border-color);
+    box-shadow: 0 0 0 4px var(--jet);
 }
 
 /*----------------------------
@@ -487,7 +479,7 @@ main {
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: var(--border-color);
+    background-color: var(--jet);
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -520,8 +512,9 @@ main {
     height: 250px;
     width: 100%;
     border-radius: 16px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--jet);
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .map_box figure { height: 100%; }
@@ -556,7 +549,7 @@ main {
 input {
     width: 100%;
     padding: 15px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--jet);
     border-radius: 15px;
     font-size: 1rem;
     color: var(--light-gray);
@@ -566,7 +559,7 @@ textarea {
     width: 100%;
     height: 120px;
     max-height: 200px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--jet);
     border-radius: 15px;
     padding: 20px;
     resize: vertical;
