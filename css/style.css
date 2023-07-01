@@ -73,7 +73,7 @@
         Reset style
 -----------------------------*/
 
-* {
+*, *::after, *::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -81,11 +81,28 @@
     text-decoration: none;
 }
 
-button, textarea, input {
-    border: none;
-    outline: none;
-    background: transparent;
+img, ion-icon, a, button, time, span { display: block; }
+
+button {
+    font: inherit;
+    background: none;
+    text-align: left;
+    cursor: pointer;
 }
+
+input, textarea {
+    display: block;
+    width: 100%;
+    background: none;
+    font: inherit;
+}
+
+::selection {
+    background-color: var(--orange-yellow-crayola);
+    color: var(--eerie-black-1);
+}
+
+:focus { outline-color: var(--orange-yellow-crayola); }
 
 body, html { font-family: 'Poppins', sans-serif; }
 
@@ -107,11 +124,6 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
 
-::selection {
-    background-color: var(--orange-yellow-crayola);
-    color: var(--eerie-black-1);
-}
-
 /*----------------------------
         Main
 -----------------------------*/
@@ -125,6 +137,15 @@ main {
 /*----------------------------
     Reused style
 -----------------------------*/
+
+#sidebar, article {
+    background: var(--eerie-black-2);
+    border: 1px solid var(--jet);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: var(--shadow-1);
+    z-index: 1;
+}
 
 .icon_box {
     width: 30px;
@@ -169,53 +190,63 @@ main {
 }
 
 /*----------------------------
-    Profile navegation
+    Sidebar Section
 -----------------------------*/
 
 #sidebar {
     max-height: 112px;
-    border: 1px solid var(--jet);
-    border-radius: 20px;
     position: relative;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--eerie-black-2);
-    margin-bottom: 15px;
     transition: var(--transition-1);
+    margin-bottom: 15px;
 }
 
-#profile { padding: 15px; }
+#sidebar.active {
+    max-height: 415px;
+}
 
-.profile_img {
-    background-color:  var(--jet);
-    object-fit: center;
-    border-radius: 20px;
+#sidebar.active .profile_info {
+    opacity: 1;
+    visibility: visible;
 }
 
 .profile_header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 15px;
 }
 
-.profile_header div:first-of-type { margin-left: 15px; }
+.profile_img {
+    background: var(--onyx);
+    border-radius: 20px;
+}
 
-.profile_header h1 {
+.profile_img img { object-fit: cover; }
+
+.profile_header_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 0;
+}
+
+.profile_header_title h1 {
+    font-size: var(--fs-subtitle);
+    font-weight: 500;
     color: var(--white-1);
-    font-weight: 600;
-    font-size: var(--fs-medium);
 }
 
-.profile_header h3 {
-    font: var(--fs-text);
-    color: var(--light-gray);
-    background-color: var(--onyx);
-    width: 110px;
-    text-align: center;
-    padding: 3px;
-    border-radius: 7px;
-    margin-top: 10px;
+.profile_header_title h3 {
+    width: max-content;
+    background: var(--onyx);
+    border-radius: 8px;
+    width: max-content;
+    padding: 3px 12px;
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: var(--white-1);
 }
 
 .profile_info {
@@ -227,53 +258,42 @@ main {
 .profile_info_more {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 25px;
+    margin: 15px 0;
+    padding: 15px 0;
+    border-top: 1px solid var(--jet);
+    border-bottom: 1px solid var(--jet);
 }
 
-.items_list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.contact_info { margin-left: 10px; }
-
-.contact_info span {
-    font-size: var(--fs-small);
-    color: var(--light-gray-70);
-}
-
-.contact_info p, address {
-    font-size: var(--fs-text);
-    color: var(--white-2);
-    font-weight: 300;
-}
-
-.social_icons ul {
+.profile_item {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 15px;
 }
 
-.social_icons a {
-    color: var(--orange-yellow-crayola);
+.profile_item_link span {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--light-gray-70);
+}
+
+.profile_item_link a, time, address {
+    font-size: var(--fs-text);
+    font-weight: 500;
+    color: var(--white-2);
+}
+
+.social_contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.social_contacts a {
     font-size: var(--fs-subtitle);
-}
-
-.border_separator {
-    height: 1px;
-    background-color: var(--jet);
-    margin: 15px 0 15px 0;
-}
-
-#sidebar.active {
-    max-height: 397px;
-}
-
-#sidebar.active .profile_info {
-    opacity: 1;
-    visibility: visible;
+    color: var(--light-gray-70);
 }
 
 /*----------------------------
@@ -292,6 +312,7 @@ main {
     font-size: var(--fs-medium);
     background: var(--border-gradient-onyx);
     right: 0;
+    top: 0;
     width: 30px;
     height: 30px;
     box-shadow: var(--shadow-2);
@@ -303,7 +324,6 @@ main {
 }
 
 #btn:hover {
-    cursor: pointer;
     border-left: 1px solid var(--orange-yellow-crayola);
     border-top: 1px solid var(--orange-yellow-crayola);
     background: var(--gradient-yellow-1);
@@ -352,13 +372,6 @@ main {
 /*----------------------------
     About me section
 -----------------------------*/
-
-.content_container {
-    border-radius: 20px;
-    border: 1px solid var(--jet);
-    padding: 15px;
-    background-color: var(--eerie-black-2);
-}
 
 .about_me_content {
     color: var(--light-gray);
@@ -914,7 +927,7 @@ input:focus:invalid, textarea:focus:invalid { border-color: var(--bittersweet-sh
     #sidebar {
         position: sticky;
         top: 60px;
-        max-height: max-content;
+        max-height: max-content !important  ;
         width: max-content;
         height: 100%;
         padding-top: 60px;
@@ -923,7 +936,11 @@ input:focus:invalid, textarea:focus:invalid { border-color: var(--bittersweet-sh
         border: 1px solid red;
     }
 
-    .profile_info_more { grid-template-columns: 1fr; }
+    .profile_info_more {
+        border: 1px solid red;
+        grid-template-columns: 1fr;
+        border-bottom: none;
+    }
 
 
     .profile_header {
