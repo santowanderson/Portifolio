@@ -11,20 +11,19 @@ toggleButton.addEventListener('click', () => {
 
 
 //form variables
+const form = document.querySelector('[data-form]');
 const inputs = document.querySelectorAll('[data-form-input]');
-const formBtn = document.querySelector('.send_message_btn');
-const form = document.querySelector('.form');
+const formBtn = document.querySelector('[data-form-btn]');
 
-//add event to all forms input
+//add event to input field
 for (let i = 0; i < inputs.length; i++) {
-	inputs[i].addEventListener('input', function () {
-  
-		// check form validation
+	inputs[i].addEventListener('input', function() {
 		if (form.checkValidity()) {
 			formBtn.removeAttribute('disabled');
 		} else {
 			formBtn.setAttribute('disabled', '');
 		}
-  
 	});
 }
+
+//send email

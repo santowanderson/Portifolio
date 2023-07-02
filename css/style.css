@@ -356,7 +356,7 @@ main {
     gap: 15px;
 }
 
-#navbar ul li a {
+#navbar a {
     color: var(--light-gray);
     font-size: 0.7rem;
     font-weight: 300;
@@ -367,9 +367,7 @@ main {
     color: var(--light-gray-70);
 }
 
-.selected {
-    color: var(--vegas-gold) !important;
-}
+.marked { color: var(--orange-yellow-crayola) !important; }
 
 /*----------------------------
     About me section

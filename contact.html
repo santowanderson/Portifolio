@@ -89,13 +89,13 @@
         <article>
             <nav id="navbar">
                 <ul>
-                    <li><a href="index.html" class="nav_link">About</a></li>
-                    <li><a href="resume.html" class="nav_link">Resume</a></li>
-                    <li><a href="portfolio.html" class="nav_link">Portfolio</a></li>
-                    <li><a href="contact.html" class="nav_link selected">Contact</a></li>
+                    <li><a href="index.html" class="nav_link" data-nav-link>About</a></li>
+                    <li><a href="resume.html" class="nav_link" data-nav-link>Resume</a></li>
+                    <li><a href="portfolio.html" class="nav_link" data-nav-link>Portfolio</a></li>
+                    <li><a href="contact.html" class="nav_link marked" data-nav-link>Contact</a></li>
                 </ul>
             </nav>
-            <section>
+            <section data-page="contact">
                 <header class="title">
                     <h1>Contact</h1>
                 </header>
@@ -106,17 +106,18 @@
                             width="400" height="300" allowfullscreen="" loading="lazy"></iframe>
                     </figure>
                 </div>
-                <form action="">
+                <form action="https://api.staticforms.xyz/submit" method="post" data-form>
                     <header class="subtitle">
                         <h1>Contact Form</h1>
                     </header>
+                    <input type="hidden" name="accessKey" value="08d9dd45-03f2-4ac8-b6b2-e3a478d8bd17">
                     <div class="form_wrapper">
                         <div class="input_wrapper">
-                            <input type="text" required placeholder="Full name">
-                            <input type="email" required placeholder="Email address">
+                            <input type="text" name="name" required placeholder="Full name" data-form-input>
+                            <input type="email" name="email" required placeholder="Email address" data-form-input>
                         </div>
-                        <textarea required placeholder="Your message"></textarea>
-                        <button type="submit" class="form_btn" disabled><ion-icon name="paper-plane"></ion-icon></ion-icon>Send message</button>
+                        <textarea required placeholder="Your message" name="message" data-form-input></textarea>
+                        <button type="submit" class="form_btn" disabled data-form-btn><ion-icon name="paper-plane"></ion-icon></ion-icon>Send message</button>
                     </div>
                 </form>
             </section>
