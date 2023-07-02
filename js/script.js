@@ -1,4 +1,4 @@
-'use strict';
+
 
 //sidebar variables
 const toggleButton = document.querySelector('#btn');
@@ -26,4 +26,4 @@ for (let i = 0; i < inputs.length; i++) {
 	});
 }
 
-//send email
+
